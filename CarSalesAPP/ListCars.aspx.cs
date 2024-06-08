@@ -13,7 +13,7 @@ namespace CarSalesAPP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("Select * from TableCar where CarConfirmation=@pcon", SqlConnectionClass.connection);
+            SqlCommand cmd = new SqlCommand("Select CarModel,BrandName,CarPhoto,CarFuelType,CarDescription,CarSeller,CarContact,CarPrice,CarBrandID from TableCar inner join TableBrand on TableCar.CarBrandID=TableBrand.BrandID where CarConfirmation=@pcon", SqlConnectionClass.connection);
 
             SqlConnectionClass.CheckConnection();
 

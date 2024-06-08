@@ -6,9 +6,9 @@
                 <table class="w-100">
                     <tr>
                         <td style="height: 21px">
-                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("CarModel") %>'></asp:Label>
+                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("BrandName") %>'></asp:Label>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("CarBrandID") %>'></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("CarModel") %>'></asp:Label>
                         </td>
                     </tr>
                     <tr>
@@ -26,7 +26,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:TextBox ID="TextBox1" runat="server" Height="135px" Text='<%# Eval("CarDescription") %>' TextMode="MultiLine" Width="427px"></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" Height="135px" Text='<%# Eval("CarDescription") %>' TextMode="MultiLine" Width="427px" Enabled="False"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
