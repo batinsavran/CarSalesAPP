@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Web.UI;
 using CarSalesAPP.Classes;
 
 namespace CarSalesAPP
@@ -18,12 +14,29 @@ namespace CarSalesAPP
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            SqlCommand sqlCommand = new SqlCommand("Insert into TableUser (UserMail, UserPassword) values (@pmail,@ppassword)", SqlConnectionClass.connection);
-            SqlConnectionClass.CheckConnection();
+            try
+            {
+                SqlConnectionClass.CheckConnection();
 
-            sqlCommand.Parameters.AddWithValue("@pmail", tbMail.Text);
-            sqlCommand.Parameters.AddWithValue("@ppassword", tbPassword.Text);
-            sqlCommand.ExecuteNonQuery();
+                using (SqlCommand sqlCommand = new SqlCommand("Insert into TableUser (UserMail, UserPassword) values (@pmail, @ppassword)", SqlConnectionClass.connection))
+                {
+                    sqlCommand.Parameters.AddWithValue("@pmail", tbMail.Text);
+                    sqlCommand.Parameters.AddWithValue("@ppassword", tbPassword.Text);
+
+                    sqlCommand.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("Veritabanı hatası: " + ex.Message);
+            }
+            finally
+            {
+                if (SqlConnectionClass.connection.State == System.Data.ConnectionState.Open)
+                {
+                    SqlConnectionClass.connection.Close();
+                }
+            }
         }
     }
 }
