@@ -29,11 +29,10 @@
                         <a class="nav-link" href="AboutUs.aspx">Hakkımızda</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Admin Panel</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Link</a></li>
-                            <li><a class="dropdown-item" href="#">Another link</a></li>
-                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                            <li><a class="dropdown-item" href="ACars.aspx">Tüm Araçlar</a></li>
+                            <li><a class="dropdown-item" href="AUsers.aspx">Tüm Kullanıcılar</a></li>
                         </ul>
                     </li>
                 </ul>

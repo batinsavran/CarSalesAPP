@@ -68,7 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="ACars.aspx" />
     <Content Include="AddCars.aspx" />
+    <Content Include="AUsers.aspx" />
     <Content Include="ListCars.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />
@@ -83,12 +85,26 @@
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ACars.aspx.cs">
+      <DependentUpon>ACars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ACars.aspx.designer.cs">
+      <DependentUpon>ACars.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddCars.aspx.cs">
       <DependentUpon>AddCars.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AddCars.aspx.designer.cs">
       <DependentUpon>AddCars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AUsers.aspx.cs">
+      <DependentUpon>AUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AUsers.aspx.designer.cs">
+      <DependentUpon>AUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="Classes\SqlConnectionClass.cs" />
     <Compile Include="ListCars.aspx.cs">
