@@ -3,52 +3,52 @@
     <form id="form1" runat="server">
         <table class="w-100">
             <tr>
-                <td style="width: 181px">Araba Markasını Seçiniz : </td>
-                <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="180px">
+                <td style="width: 181px; height: 38px">Araba Markasını Seçiniz : </td>
+                <td style="height: 38px">
+                    <asp:DropDownList ID="DropDownList1" runat="server" Height="40px" Width="178px">
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td style="width: 181px">Araba Modelini Giriniz :</td>
                 <td>
-                    <asp:TextBox ID="tbModel" runat="server" Width="172px"></asp:TextBox>
+                    <asp:TextBox ID="tbModel" runat="server" Width="178px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="width: 181px; height: 27px">Araba Fotoğraf Linki : </td>
                 <td style="height: 27px">
-                    <asp:TextBox ID="tbPhoto" runat="server" Width="174px"></asp:TextBox>
+                    <asp:TextBox ID="tbPhoto" runat="server" Width="177px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="width: 181px">Araba Yakıt Tipi Giriniz : </td>
                 <td>
-                    <asp:TextBox ID="tbFuelType" runat="server" Width="173px"></asp:TextBox>
+                    <asp:TextBox ID="tbFuelType" runat="server" Width="178px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="width: 181px">Açıklama Giriniz :</td>
                 <td>
-                    <asp:TextBox ID="tbDescription" runat="server" Height="131px" TextMode="MultiLine" Width="180px"></asp:TextBox>
+                    <asp:TextBox ID="tbDescription" runat="server" Height="131px" TextMode="MultiLine" Width="179px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="width: 181px; height: 21px">Araç Satıcısı :</td>
                 <td style="height: 21px">
-                    <asp:TextBox ID="tbSeller" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbSeller" runat="server" Width="178px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="width: 181px; height: 21px">İletişim Numarası : </td>
                 <td style="height: 21px">
-                    <asp:TextBox ID="tbContact" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbContact" runat="server" Width="178px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td style="width: 181px">Araç Fiyatı : </td>
                 <td>
-                    <asp:TextBox ID="tbPrice" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbPrice" runat="server" Width="178px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
