@@ -31,7 +31,6 @@ namespace CarSalesAPP
                 }
                 catch (Exception ex)
                 {
-                    Response.Write("Veritabanı hatası: " + ex.Message);
                 }
                 finally
                 {
@@ -61,7 +60,6 @@ namespace CarSalesAPP
             }
             catch (Exception ex)
             {
-                Response.Write("Veritabanı hatası: " + ex.Message);
             }
             finally
             {
