@@ -1,21 +1,54 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AUsers.aspx.cs" Inherits="CarSalesAPP.AUsers" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        th, td {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
     <form id="form1" runat="server">
         <div style="margin-left: 80px">
-            <asp:DataGrid ID="DataGrid1" runat="server" CellPadding="2" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" Height="450px" Width="1350px">
-                <Columns>
-                    <asp:BoundColumn DataField="UserID" HeaderText="User ID" />
-                    <asp:BoundColumn DataField="UserMail" HeaderText="User Mail" />
-                    <asp:BoundColumn DataField="UserPassword" HeaderText="User Password" />
-                </Columns>
-                <AlternatingItemStyle BackColor="White" />
-                <EditItemStyle BackColor="#7C6F57" />
-                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <ItemStyle BackColor="#E3EAEB" />
-                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                <SelectedItemStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-            </asp:DataGrid>
+            <asp:Repeater ID="Repeater1" runat="server">
+                <HeaderTemplate>
+                    <table border="1">
+                        <tr>
+                            <th>User ID</th>
+                            <th>User Mail</th>
+                            <th>User Password</th>
+                        </tr>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr>
+                        <td><%# Eval("UserID") %></td>
+                        <td><%# Eval("UserMail") %></td>
+                        <td><%# Eval("UserPassword") %></td>
+                    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </table>
+                </FooterTemplate>
+            </asp:Repeater>
         </div>
     </form>
 </asp:Content>

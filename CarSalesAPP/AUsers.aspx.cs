@@ -32,8 +32,8 @@ namespace CarSalesAPP
                     {
                         DataTable dt = new DataTable();
                         sda.Fill(dt);
-                        DataGrid1.DataSource = dt;
-                        DataGrid1.DataBind();
+                        Repeater1.DataSource = dt;
+                        Repeater1.DataBind();
                     }
                 }
             }
