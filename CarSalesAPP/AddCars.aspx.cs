@@ -41,7 +41,8 @@ namespace CarSalesAPP
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlCommand sql = new SqlCommand("Insert into TableCar (CarModel, CarBrandID, CarPhoto, CarFuelType, CarDescription, CarSeller, CarContact, CarPrice, CarConfirmation) values (@pmodel, @pbrand, @pphoto, @pfuel, @pdescription, @pseller, @pcontact, @pprice, @pconfirmation)", SqlConnectionClass.connection);
+            SqlCommand sql = new SqlCommand("Insert into TableCar (CarModel, CarBrandID, CarPhoto, CarFuelType, CarDescription, CarSeller, CarContact, CarPrice, CarConfirmation)" +
+                " values (@pmodel, @pbrand, @pphoto, @pfuel, @pdescription, @pseller, @pcontact, @pprice, @pconfirmation)", SqlConnectionClass.connection);
             SqlConnectionClass.CheckConnection();
 
             try

@@ -51,5 +51,6 @@
         <div class="container-fluid mt-3">
         </div>
     </asp:ContentPlaceHolder>
+    </footer>
 </body>
 </html>

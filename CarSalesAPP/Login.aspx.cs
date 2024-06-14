@@ -31,7 +31,7 @@ namespace CarSalesAPP
 
             if (dt.Rows.Count > 0)
             {
-                Response.Write("Giriş Yapıldı");
+                Response.Redirect("ListCars.aspx");
             }
             else
             {
